@@ -42,5 +42,6 @@ require('laravel-elixir-vue');
          'theme/js/script.js',
          'mobirise-gallery/script.js',
          'formoid/formoid.min.js',
+         'vue/vue.min.js',
      ], 'public/js/plugins.js');
  });
