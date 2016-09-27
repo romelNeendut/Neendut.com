@@ -9,6 +9,12 @@
   <meta name="description" content="">
   <link rel="stylesheet" href="css/neendut.css">
   <title>{{ config('app.name') }}</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <script>
+      window.Laravel = <?php echo json_encode([
+          'csrfToken' => csrf_token(),
+      ]); ?>
+  </script>
 </head>
 <body>
 
