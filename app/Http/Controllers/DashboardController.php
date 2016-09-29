@@ -25,4 +25,14 @@ class DashboardController extends Controller
     {
         return view('admin.index');
     }
+
+    public function profile()
+    {
+        return view('admin.profile');
+    }
+
+    public function mybusiness()
+    {
+        return view('admin.mybusiness');
+    }
 }

@@ -12,8 +12,8 @@
                     <div class="wrapper">
                         <ul class="main-navigation navigation-top-header"></ul>
                         <ul class="user-area">
-                            <li><a href="profile.html"><strong>{{Auth::user()->name}} </strong></a></li>
-                            <li><a href="my-items.html">My Items</a></li>
+                            <li><a href="/profile"><strong>{{Auth::user()->name}} </strong></a></li>
+                            <li><a href="/mybusiness">My Items</a></li>
                             <li>
                               <a href="{{ url('/logout') }}"
                                   onclick="event.preventDefault();
@@ -121,10 +121,11 @@
                             </figure>
 
                             <!--Listing List-->
-                            <section class="block listing"><div class="item list">
+                            <section class="block listing">
+                              <div class="item list">
                                 <div class="image">
                                     <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                    <a href="item-detail.html">
+                                    <a href="/belle-spa">
                                         <div class="overlay">
                                             <div class="inner">
                                                 <div class="content">
@@ -146,7 +147,7 @@
                                     </a>
                                 </div>
                                 <div class="wrapper">
-                                    <a href="item-detail.html"><h3>Belle's Beauty and wellness Spa</h3></a>
+                                    <a href="/belle-spa"><h3>Belle's Beauty and wellness Spa</h3></a>
                                     <figure>21 St. Makati City</figure>
                                     <div class="info">
                                         <div class="type">

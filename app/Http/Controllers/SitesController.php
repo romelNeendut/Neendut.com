@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class SitesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +23,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('sites.index');
+    }
+
+
+    public function show($site_name)
+    {
+       return view('sites.index');
     }
 }

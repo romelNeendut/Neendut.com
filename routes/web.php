@@ -15,4 +15,10 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+
 Route::get('/admin', 'DashboardController@index');
+Route::get('/profile', 'DashboardController@profile');
+Route::get('/mybusiness', 'DashboardController@mybusiness');
+
+Route::get('/sites', 'SitesController@index');
+Route::get('{store_name}', 'SitesController@show');
