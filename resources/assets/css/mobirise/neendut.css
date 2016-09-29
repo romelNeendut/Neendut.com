@@ -1,0 +1,23 @@
+
+body, html {
+  color: #474747;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+body.navigation-fixed #outer-wrapper.show-nav #inner-wrapper .header, html.navigation-fixed #outer-wrapper.show-nav #inner-wrapper .header {
+  left: -200px;
+}
+body.navigation-fixed #outer-wrapper.show-nav #inner-wrapper .off-canvas-navigation, html.navigation-fixed #outer-wrapper.show-nav #inner-wrapper .off-canvas-navigation {
+  right: 0;
+}
+body.navigation-fixed #outer-wrapper #inner-wrapper .header, html.navigation-fixed #outer-wrapper #inner-wrapper .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+body.navigation-fixed #outer-wrapper #inner-wrapper .off-canvas-navigation, html.navigation-fixed #outer-wrapper #inner-wrapper .off-canvas-navigation {
+  top: 0 !important;
+  position: fixed;
+}
