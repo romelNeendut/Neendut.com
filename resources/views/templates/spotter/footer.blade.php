@@ -22,7 +22,7 @@ Email: support@neendut.com<br>
               </ul>
             </div>
             <div class="col-xs-12 col-md-6">
-                <div class="mbr-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJtcaxrqlZwokRfwmmibzPsTU" allowfullscreen=""></iframe></div>
+                <div class="mbr-map"><iframe frameborder="0" style="border:0" src="https://www.google.com.ph/maps/@14.5653015,121.0246344,11z" allowfullscreen=""></iframe></div>
             </div>
         </div>
     </div>

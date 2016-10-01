@@ -8,8 +8,8 @@
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="/" class="navbar-logo"><img src="/img/wellness-beauty-spa-36-26-512-128x128-25.png" alt="Mobirise"></a>
-                        <a class="navbar-caption" href="/">Neendut</a>
+                        <a href="/" class="navbar-logo"><img src="/img/wellness-beauty-spa-36-26-512-128x128-25.png" alt="Neendut"></a>
+                        <a class="navbar-caption" href="/">Belle's Spa</a>
                     </div>
 
                 </div>
@@ -228,7 +228,7 @@
                 <br>
                 <a ga-event="Page Tracking;View Map;Company Info Section - primary" href="/cmap/mvtl19x/mom-s-homemade-pies" rel="nofollow" class="btn btn-default dropshadow btn-lg mvl phxl"><span class="mhl">Get Directions</span></a>
                 <a ga-event="Page Tracking;View Map;Company Info Section - map image" href="/cmap/mvtl19x/mom-s-homemade-pies" rel="nofollow">
-                    <img src="http://maps.googleapis.com/maps/api/staticmap?center=40.4424,-86.12712&amp;zoom=12&amp;size=300x150&amp;style=element:labels|visibility:off&amp;style=element:geometry.stroke|visibility:off&amp;style=feature:landscape|element:geometry|saturation:-100&amp;style=feature:water|saturation:-100|invert_lightness:true&amp;markers=color:blue%7Clabel:A%7C40.4424,-86.12712&amp;key=AIzaSyAH2GkZCNjkMSiCl674gRCSssW40sU1vLM">
+                    <img src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJtcaxrqlZwokRfwmmibzPsTU">
                 </a>
               </div>
 

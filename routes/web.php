@@ -22,3 +22,6 @@ Route::get('/mybusiness', 'DashboardController@mybusiness');
 
 Route::get('/sites', 'SitesController@index');
 Route::get('{store_name}', 'SitesController@show');
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
