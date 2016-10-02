@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('header')
+@include('templates.mobirise.header')
 <body>
 
 @yield('content')
 
 
-@include('footer')
-<script src="js/plugins.js"></script>
+@include('templates.mobirise.footer')
 
 </body>
 </html>

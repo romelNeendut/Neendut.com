@@ -9,7 +9,6 @@
 
                     <div class="navbar-brand">
                         <a href="/" class="navbar-logo"><img src="/img/logo.png" alt="Neendut"></a>
-                        <a class="navbar-caption" href="/">Neendut</a>
                     </div>
 
                 </div>
