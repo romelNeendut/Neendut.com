@@ -23,10 +23,10 @@
                         <a class="nav-link link" href="#msg-box2-0">OVERVIEW</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link" href="#pricing-table1-0">Pricing</a>
+                        <a class="nav-link link" href="#pricing-table1-0">PRICING</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link link" href="#contacts2-0">Contact Us</a>
+                        <a class="nav-link link" href="#contacts2-0">CONTACT US</a>
                       </li>
                     </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">

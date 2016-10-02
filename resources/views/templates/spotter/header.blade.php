@@ -6,7 +6,7 @@
   <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
   <meta name="description" content="">
   <link rel="stylesheet" href="css/spotter.css">
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('app.name') }} - Share. Earn. Help</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script>
       window.Laravel = <?php echo json_encode([
