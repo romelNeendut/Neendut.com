@@ -1,61 +1,5 @@
-@extends('layouts.admin')
-<div id="outer-wrapper">
-    <!-- Inner Wrapper -->
-    <div id="inner-wrapper">
-        <!-- Navigation-->
-        <div class="header">
-            <div class="wrapper">
-                <div class="brand">
-                    <a href="/"><img src="/img/logo.png" alt="logo" height="50"></a>
-                </div>
-                <nav class="navigation-items">
-                    <div class="wrapper">
-                        <ul class="main-navigation navigation-top-header"></ul>
-                        <ul class="user-area">
-                            <li><a href="/profile"><strong>{{Auth::user()->name}} </strong></a></li>
-                            <li><a href="/mybusiness">My Items</a></li>
-                            <li>
-                              <a href="{{ url('/logout') }}"
-                                  onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
-                                  Logout
-                              </a>
-                              <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                  {{ csrf_field() }}
-                              </form>
-                            </li>
-                            <li class="pop-navigation"><a href="#options" data-toggle="collapse" aria-expanded="false" aria-controls="options"><i class="fa fa-cog"></i></a>
-                                <div class="collapse" id="options">
-                                    <ul class="">
-                                        <li><a href="#">About Me</a></li>
-                                        <li><a href="#">My Ads</a></li>
-                                        <li><a href="#">Favorites</a></li>
-                                        <li><a href="#">Payments</a></li>
-                                        <li><a href="#">Reviews</a></li>
-                                        <li><a href="#">Profile Settings</a></li>
-                                        <li><a href="#">Logout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="submit.html" class="submit-item">
-                            <div class="content"><span>Submit Your Item</span></div>
-                            <div class="icon">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </a>
-                        <div class="toggle-navigation">
-                            <div class="icon">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- end Navigation-->
+@extends('layouts.spotter')
+@section('content')
         <!-- Page Canvas-->
         <div id="page-canvas">
             <!--Off Canvas Navigation-->
@@ -97,11 +41,10 @@
                         <!--Content-->
                         <div class="col-md-9">
                             <header>
-                                <h1 class="page-title">Listing</h1>
+                                <h1 class="page-title">Newsfeed</h1>
                             </header>
                             <figure class="filter clearfix">
                                 <div class="buttons pull-left">
-                                    <a href="listing-grid.html" class="btn icon"><i class="fa fa-th"></i>Grid</a>
                                     <a href="listing-list.html" class="btn icon active"><i class="fa fa-th-list"></i>List</a>
                                 </div>
                                 <div class="pull-right">
@@ -125,7 +68,7 @@
                               <div class="item list">
                                 <div class="image">
                                     <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                    <a href="/belle-spa">
+                                    <a href="/sites/belle-spa">
                                         <div class="overlay">
                                             <div class="inner">
                                                 <div class="content">
@@ -147,7 +90,7 @@
                                     </a>
                                 </div>
                                 <div class="wrapper">
-                                    <a href="/belle-spa"><h3>Belle's Beauty and wellness Spa</h3></a>
+                                    <a href="/sites/belle-spa"><h3>Belle's Beauty and wellness Spa</h3></a>
                                     <figure>21 St. Makati City</figure>
                                     <div class="info">
                                         <div class="type">
@@ -162,7 +105,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -184,7 +127,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Cash Cow Restaurante</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Cash Cow Restaurante</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -199,7 +142,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -212,7 +155,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Benny’s Cafeteria</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Benny’s Cafeteria</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -227,7 +170,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -243,7 +186,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Big Bamboo</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Big Bamboo</h3></a>
                                         <figure>4662 Bruce Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -258,7 +201,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -274,7 +217,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Sushi Wooshi Bar</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Sushi Wooshi Bar</h3></a>
                                         <figure>357 Trainer Avenue</figure>
                                         <div class="info">
                                             <div class="type">
@@ -289,7 +232,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -302,7 +245,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Max Five Lounge</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Max Five Lounge</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -317,7 +260,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -330,7 +273,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Magma Bar & Grill</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Magma Bar & Grill</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -345,7 +288,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -361,7 +304,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Guild Trattoria</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Guild Trattoria</h3></a>
                                         <figure>4662 Bruce Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -376,7 +319,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -389,7 +332,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Sushi Wooshi Bar</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Sushi Wooshi Bar</h3></a>
                                         <figure>357 Trainer Avenue</figure>
                                         <div class="info">
                                             <div class="type">
@@ -404,7 +347,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -417,7 +360,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Max Five Lounge</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Max Five Lounge</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -432,7 +375,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -445,7 +388,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Magma Bar & Grill</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Magma Bar & Grill</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -460,7 +403,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -476,7 +419,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Guild Trattoria</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Guild Trattoria</h3></a>
                                         <figure>4662 Bruce Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -491,7 +434,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -504,7 +447,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Sushi Wooshi Bar</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Sushi Wooshi Bar</h3></a>
                                         <figure>357 Trainer Avenue</figure>
                                         <div class="info">
                                             <div class="type">
@@ -519,7 +462,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -541,7 +484,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Steak House Restaurant</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Steak House Restaurant</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -556,7 +499,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -569,7 +512,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Benny’s Cafeteria</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Benny’s Cafeteria</h3></a>
                                         <figure>63 Birch Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -584,7 +527,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -600,7 +543,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Big Bamboo</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Big Bamboo</h3></a>
                                         <figure>4662 Bruce Street</figure>
                                         <div class="info">
                                             <div class="type">
@@ -615,7 +558,7 @@
                                 <div class="item list">
                                     <div class="image">
                                         <div class="quick-view"><i class="fa fa-eye"></i><span>Quick View</span></div>
-                                        <a href="item-detail.html">
+                                        <a href="/sites/belle-spa">
                                             <div class="overlay">
                                                 <div class="inner">
                                                     <div class="content">
@@ -631,7 +574,7 @@
                                         </a>
                                     </div>
                                     <div class="wrapper">
-                                        <a href="item-detail.html"><h3>Sushi Wooshi Bar</h3></a>
+                                        <a href="/sites/belle-spa"><h3>Sushi Wooshi Bar</h3></a>
                                         <figure>357 Trainer Avenue</figure>
                                         <div class="info">
                                             <div class="type">
@@ -662,7 +605,7 @@
                             <aside id="sidebar">
                                 <section>
                                     <header><h2>New Places</h2></header>
-                                    <a href="item-detail.html" class="item-horizontal small">
+                                    <a href="/sites/belle-spa" class="item-horizontal small">
                                         <h3>Cash Cow Restaurante</h3>
                                         <figure>63 Birch Street</figure>
                                         <div class="wrapper">
@@ -677,7 +620,7 @@
                                         </div>
                                     </a>
                                     <!--/.item-horizontal small-->
-                                    <a href="item-detail.html" class="item-horizontal small">
+                                    <a href="/sites/belle-spa" class="item-horizontal small">
                                         <h3>Blue Chilli</h3>
                                         <figure>2476 Whispering Pines Circle</figure>
                                         <div class="wrapper">
@@ -692,7 +635,7 @@
                                         </div>
                                     </a>
                                     <!--/.item-horizontal small-->
-                                    <a href="item-detail.html" class="item-horizontal small">
+                                    <a href="/sites/belle-spa" class="item-horizontal small">
                                         <h3>Eddie’s Fast Food</h3>
                                         <figure>4365 Bruce Street</figure>
                                         <div class="wrapper">
@@ -748,135 +691,4 @@
             <!-- end Page Content-->
         </div>
         <!-- end Page Canvas-->
-        <!--Page Footer-->
-        <footer id="page-footer">
-            <div class="inner">
-                <div class="footer-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4">
-                                <!--New Items-->
-                                <section>
-                                    <h2>New Items</h2>
-                                    <a href="item-detail.html" class="item-horizontal small">
-                                        <h3>Cash Cow Restaurante</h3>
-                                        <figure>63 Birch Street</figure>
-                                        <div class="wrapper">
-                                            <div class="image"><img src="/img/items/1.jpg" alt=""></div>
-                                            <div class="info">
-                                                <div class="type">
-                                                    <i><img src="/img/icons/restaurants-bars/restaurants/restaurant.png" alt=""></i>
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="rating" data-rating="4"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!--/.item-horizontal small-->
-                                    <a href="item-detail.html" class="item-horizontal small">
-                                        <h3>Blue Chilli</h3>
-                                        <figure>2476 Whispering Pines Circle</figure>
-                                        <div class="wrapper">
-                                            <div class="image"><img src="/img/items/2.jpg" alt=""></div>
-                                            <div class="info">
-                                                <div class="type">
-                                                    <i><img src="/img/icons/restaurants-bars/restaurants/restaurant.png" alt=""></i>
-                                                    <span>Restaurant</span>
-                                                </div>
-                                                <div class="rating" data-rating="3"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <!--/.item-horizontal small-->
-                                </section>
-                                <!--end New Items-->
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <!--Recent Reviews-->
-                                <section>
-                                    <h2>Recent Reviews</h2>
-                                    <a href="item-detail.html#reviews" class="review small">
-                                        <h3>Max Five Lounge</h3>
-                                        <figure>4365 Bruce Street</figure>
-                                        <div class="info">
-                                            <div class="rating" data-rating="4"></div>
-                                            <div class="type">
-                                                <i><img src="/img/icons/restaurants-bars/restaurants/restaurant.png" alt=""></i>
-                                                <span>Restaurant</span>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non suscipit felis, sed sagittis tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras ac placerat mauris.
-                                        </p>
-                                    </a><!--/.review-->
-                                    <a href="item-detail.html#reviews" class="review small">
-                                        <h3>Saguaro Tavern</h3>
-                                        <figure>2476 Whispering Pines Circle</figure>
-                                        <div class="info">
-                                            <div class="rating" data-rating="5"></div>
-                                            <div class="type">
-                                                <i><img src="/img/icons/restaurants-bars/restaurants/restaurant.png" alt=""></i>
-                                                <span>Restaurant</span>
-                                            </div>
-                                        </div>
-                                        <p>
-                                            Pellentesque mauris. Proin sit amet scelerisque risus. Donec semper semper erat ut mollis curabitur
-                                        </p>
-                                    </a>
-                                    <!--/.review-->
-                                </section>
-                                <!--end Recent Reviews-->
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <section>
-                                    <h2>About Us</h2>
-                                    <address>
-                                        <div>Max Five Lounge</div>
-                                        <div>63 Birch Street</div>
-                                        <div>Granada Hills, CA 91344</div>
-                                        <figure>
-                                            <div class="info">
-                                                <i class="fa fa-mobile"></i>
-                                                <span>818-832-5258</span>
-                                            </div>
-                                            <div class="info">
-                                                <i class="fa fa-phone"></i>
-                                                <span>+1 123 456 789</span>
-                                            </div>
-                                            <div class="info">
-                                                <i class="fa fa-globe"></i>
-                                                <a href="#">www.maxfivelounge.com</a>
-                                            </div>
-                                        </figure>
-                                    </address>
-                                    <div class="social">
-                                        <a href="#" class="social-button"><i class="fa fa-twitter"></i></a>
-                                        <a href="#" class="social-button"><i class="fa fa-facebook"></i></a>
-                                        <a href="#" class="social-button"><i class="fa fa-pinterest"></i></a>
-                                    </div>
-
-                                    <a href="contact.html" class="btn framed icon">Contact Us<i class="fa fa-angle-right"></i></a>
-                                </section>
-                            </div>
-                            <!--/.col-md-4-->
-                        </div>
-                        <!--/.row-->
-                    </div>
-                    <!--/.container-->
-                </div>
-                <!--/.footer-top-->
-                <div class="footer-bottom">
-                    <div class="container">
-                        <span class="left">(C) ThemeStarz, All rights reserved</span>
-                            <span class="right">
-                                <a href="#page-top" class="to-top roll"><i class="fa fa-angle-up"></i></a>
-                            </span>
-                    </div>
-                </div>
-                <!--/.footer-bottom-->
-            </div>
-        </footer>
-        <!--end Page Footer-->
-    </div>
-    <!-- end Inner Wrapper -->
-</div>
+@stop

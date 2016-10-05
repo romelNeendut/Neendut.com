@@ -48,27 +48,27 @@ require('laravel-elixir-vue');
 
     //  Spotter Template
 
-        mix.styles([
-            'spotter/fonts/font-awesome.css',
-            'http://fonts.googleapis.com/css?family=Montserrat:400,700',
-            'spotter/css/bootstrap.css',
-            'spotter/css/bootstrap-select.min.css',
-            'spotter/css/owl.carousel.css',
-            'spotter/css/style.css',
-            'spotter/css/user.style.css',
-        ], 'public/css/spotter.css');
+      mix.styles([
+          'spotter/fonts/font-awesome.css',
+          'http://fonts.googleapis.com/css?family=Montserrat:400,700',
+          'spotter/css/bootstrap.css',
+          'spotter/css/bootstrap-select.min.css',
+          'spotter/css/owl.carousel.css',
+          'spotter/css/style.css',
+          'spotter/css/user.style.css',
+      ], 'public/css/spotter.css');
 
-        mix.scripts([
-            'spotter/js/jquery-2.1.0.min.js',
-            'spotter/js/before.load.js',
-            'http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places',
-            'spotter/js/jquery-migrate-1.2.1.min.js',
-            'spotter/bootstrap/js/bootstrap.min.js',
-            'spotter/js/bootstrap-select.min.js',
-            'spotter/js/smoothscroll.js',
-            'spotter/js/bootstrap-select.min.js',
-            'spotter/js/jquery.hotkeys.js',
-            'spotter/js/custom.js',
-        ],  'public/js/spotter.js');
+      mix.scripts([
+          'spotter/js/jquery-2.1.0.min.js',
+          'spotter/js/before.load.js',
+          'http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places',
+          'spotter/js/jquery-migrate-1.2.1.min.js',
+          'spotter/bootstrap/js/bootstrap.min.js',
+          'spotter/js/bootstrap-select.min.js',
+          'spotter/js/smoothscroll.js',
+          'spotter/js/bootstrap-select.min.js',
+          'spotter/js/jquery.hotkeys.js',
+          'spotter/js/custom.js',
+      ],  'public/js/spotter.js');
 
  });

@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <section id="menu-0">
 
     <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
@@ -8,7 +10,7 @@
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="/" class="navbar-logo"><img src="/img/wellness-beauty-spa-36-26-512-128x128-25.png" alt="Neendut"></a>
+                        <a href="/newsfeed" class="navbar-logo"><img src="/img/wellness-beauty-spa-36-26-512-128x128-25.png" alt="Neendut"></a>
                         <a class="navbar-caption" href="/">Belle's Spa</a>
                     </div>
 
@@ -241,3 +243,5 @@
         </div>
       </div>
     </div>
+
+    @stop

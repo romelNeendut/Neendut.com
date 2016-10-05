@@ -29,4 +29,4 @@ Email: support@neendut.com<br>
 </section>
 
 
-<script src="js/neendut.js"></script>
+<script src="{{ elixir('js/neendut.js') }}"></script>
