@@ -16,12 +16,15 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/admin', 'DashboardController@index');
-Route::get('/profile', 'DashboardController@profile');
-Route::get('/mybusiness', 'DashboardController@mybusiness');
+Route::get('/newsfeed', 'NewsfeedsController@index');
+
+Route::get('/mybusiness', 'BusinessesController@show');
+Route::get('/submit', 'BusinessesController@create');
+
+Route::get('/profile/{profile_id}', 'ProfilesController@show');
 
 Route::get('/sites', 'SitesController@index');
-Route::get('{store_name}', 'SitesController@show');
+Route::get('/sites/{store_name}', 'SitesController@show');
 
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');

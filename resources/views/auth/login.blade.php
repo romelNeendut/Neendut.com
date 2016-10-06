@@ -14,7 +14,7 @@
                           <h4 class="mbr-section-title mbr-left display-3">Login</h4>
                           <div class="mbr-section-text lead">
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                                                  {{ csrf_field() }}
+                            {{ csrf_field() }}
 
                                                   <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                                       <label for="email" class="col-md-4 control-label">E-Mail Address</label>

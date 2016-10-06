@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
 @include('home.common.menu')
-
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar" id="title-header"
 style="background-image: url(/img/desktop-2000x1333-93.jpg);">
 
@@ -20,7 +20,7 @@ style="background-image: url(/img/desktop-2000x1333-93.jpg);">
                       <button class="btn btn-lg btn-success" data-toggle="modal" data-target="#register">Join us today!<br></button>
                       <button class="btn btn-lg btn-warning" data-toggle="modal" data-target="#login">Sign in<br></button>
                       @else
-                          <a class="btn btn-lg btn-success" href="/admin">Newsfeed<br></a>
+                          <a class="btn btn-lg btn-success" href="/newsfeed">Newsfeed<br></a>
                           <button class="btn btn-lg btn-warning"  onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">Logout as {{ Auth::user()->name }}<br></button>
                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -63,7 +63,6 @@ style="background-image: url(/img/desktop-2000x1333-93.jpg);">
     </div>
 </section>
 
-
 @include('home.common.gallery')
 @include('home.common.steps')
 @include('home.common.pricing')
@@ -71,3 +70,4 @@ style="background-image: url(/img/desktop-2000x1333-93.jpg);">
 
 @include('home.modals.register')
 @include('home.modals.login')
+@stop
