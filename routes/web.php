@@ -18,7 +18,7 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/newsfeed', 'NewsfeedsController@index');
 
-Route::get('/mybusiness', 'BusinessesController@show');
+Route::get('/mybusiness', 'BusinessesController@index');
 Route::get('/submit', 'BusinessesController@create');
 
 Route::get('/profile/{profile_id}', 'ProfilesController@show');
