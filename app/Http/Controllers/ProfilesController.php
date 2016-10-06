@@ -26,7 +26,7 @@ class ProfilesController extends Controller
         $profile = Profile::findOrFail($profile_id);
 
 
-        return view('admin.profile', [
+        return view('profile.show', [
             'profile' => $profile,
         ]);
     }

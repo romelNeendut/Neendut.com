@@ -23,11 +23,7 @@ class NewsfeedsController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('newsfeed.index');
     }
 
-    public function mybusiness()
-    {
-        return view('admin.mybusiness');
-    }
 }

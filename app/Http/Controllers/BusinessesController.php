@@ -20,15 +20,15 @@ class BusinessesController extends Controller
     * @param $profile_id
     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
     */
-    public function show()
+    public function index()
     {
 
-      return view('admin.mybusiness');
+      return view('business.index');
     }
 
 
     public function create()
     {
-      return view('admin.create');
+      return view('business.create');
     }
 }
