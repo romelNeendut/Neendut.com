@@ -22,6 +22,7 @@ Route::get('/mybusiness', 'BusinessesController@index');
 Route::get('/submit', 'BusinessesController@create');
 
 Route::get('/profile/{profile_id}', 'ProfilesController@show');
+Route::post('/profile/{profile_id}/update', 'ProfilesController@update');
 
 Route::get('/sites', 'SitesController@index');
 Route::get('/sites/{store_name}', 'SitesController@show');

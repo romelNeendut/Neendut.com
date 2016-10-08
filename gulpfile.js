@@ -56,6 +56,7 @@ require('laravel-elixir-vue');
           'spotter/css/owl.carousel.css',
           'spotter/css/style.css',
           'spotter/css/user.style.css',
+          'swal/sweetalert.css',
       ], 'public/css/spotter.css');
 
       mix.scripts([
@@ -69,6 +70,7 @@ require('laravel-elixir-vue');
           'spotter/js/bootstrap-select.min.js',
           'spotter/js/jquery.hotkeys.js',
           'spotter/js/custom.js',
+          'swal/sweetalert.min.js',
       ],  'public/js/spotter.js');
 
  });
