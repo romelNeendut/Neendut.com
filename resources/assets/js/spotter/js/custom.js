@@ -105,7 +105,7 @@ $(document).ready(function($) {
 
 // Set width for inputs in horizontal search bar -----------------------------------------------------------------------
 
-    $( "#redefine-search-form" ).load( "assets/external/_search-bar.html", function() {
+    $( "#redefine-search-form" ).load( "/assets/external/_search-bar.html", function() {
         setInputsWidth();
         //autoComplete();
     });
@@ -166,7 +166,7 @@ $(document).ready(function($) {
             }, 2000)
         }
         return false;
-    });	
+    });
 
 //  iCheck -------------------------------------------------------------------------------------------------------------
 
@@ -279,7 +279,7 @@ $(window).load(function(){
     var $equalHeight = $('.equal-height');
     for( var i=0; i<$equalHeight.length; i++ ){
         equalHeight( $equalHeight );
-    }	
+    }
 });
 
 $(window).resize(function(){

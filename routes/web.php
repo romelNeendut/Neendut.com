@@ -21,8 +21,9 @@ Route::get('/newsfeed', 'NewsfeedsController@index');
 Route::get('/mybusiness', 'BusinessesController@index');
 Route::get('/submit', 'BusinessesController@create');
 
+Route::get('/profile/get-profile', 'ProfilesController@getProfile');
+Route::post('/profile/update', 'ProfilesController@update');
 Route::get('/profile/{profile_id}', 'ProfilesController@show');
-Route::post('/profile/{profile_id}/update', 'ProfilesController@update');
 
 Route::get('/sites', 'SitesController@index');
 Route::get('/sites/{store_name}', 'SitesController@show');

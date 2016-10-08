@@ -43,7 +43,7 @@
 
             <!--Page Content-->
             <div id="page-content">
-                <section class="container">
+                <section class="container" id="profile-page">
                     <header>
                         <ul class="nav nav-pills">
                             <li class="active"><a href="/profile/1"><h1 class="page-title">{{Auth::user()->name}}</h1></a></li>
@@ -52,7 +52,9 @@
                     </header>
                     <div class="row">
                         <div class="col-md-9">
-                              {!! Form::open(['url' => 'profile/'.$profile->id.'/update', 'id' => 'form-profile']) !!}
+                              {!! Form::open(['url' => 'profile/update', 'id' => 'profile_form']) !!}
+
+                              <input type="hidden" id="profile_id" value="{{$profile->id}}">
                                 <div class="row">
                                     <!--Profile Picture-->
                                     <div class="col-md-3 col-sm-3">
@@ -70,7 +72,7 @@
                                     <!--Contact Info-->
                                     <div class="col-md-9 col-sm-9">
                                         <section>
-                                            <h3><i class="fa fa-user"></i>Personal Info</h3>
+                                            <h3><i class="fa fa-user"></i> Personal Info </h3>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
@@ -91,7 +93,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="mobile">Mobile</label>
-                                                        <input type="text" class="form-control" id="mobile" name="mobile" pattern="\d*" value="{{$profile->mobile}}">
+                                                        <input type="text" class="form-control" id="mobile" name="mobile" pattern="\d*" value="{{$profile->mobile}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -99,7 +101,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="phone">Phone</label>
-                                                        <input type="text" class="form-control" id="phone" name="phone" pattern="\d*" value="{{$profile->phone}}">
+                                                        <input type="text" class="form-control" id="phone" name="phone" pattern="\d*" value="{{$profile->phone}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -110,19 +112,19 @@
                                             <h3><i class="fa fa-map-marker"></i>Address</h3>
                                             <div class="form-group">
                                                 <label for="state">State / Municipality</label>
-                                                <input type="text" class="form-control" id="state" name="state" value="{{$profile->state}}">
+                                                <input type="text" class="form-control" id="state" name="state" value="{{$profile->state}}" readonly="true">
                                             </div>
                                             <!--/.form-group-->
                                             <div class="form-group">
                                                 <label for="city">City</label>
-                                                <input type="text" class="form-control" id="city" name="city" value="{{$profile->city}}">
+                                                <input type="text" class="form-control" id="city" name="city" value="{{$profile->city}}" readonly="true">
                                             </div>
                                             <!--/.form-group-->
                                             <div class="row">
                                                 <div class="col-md-8 col-sm-8">
                                                     <div class="form-group">
                                                         <label for="street">Street</label>
-                                                        <input type="text" class="form-control" id="street" name="street" value="{{$profile->street}}">
+                                                        <input type="text" class="form-control" id="street" name="street" value="{{$profile->street}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -130,7 +132,7 @@
                                                 <div class="col-md-4 col-sm-4">
                                                     <div class="form-group">
                                                         <label for="zip">ZIP</label>
-                                                        <input type="text" class="form-control" id="zip" name="zip" pattern="\d*" value="{{$profile->zip}}">
+                                                        <input type="text" class="form-control" id="zip" name="zip" pattern="\d*" value="{{$profile->zip}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -141,15 +143,15 @@
                                             <div class="form-group">
                                                 <label for="about-me">Some Words About Me</label>
                                                 <div class="form-group">
-                                                    <textarea class="form-control" id="about_me" rows="3" name="about_me" required>{{$profile->about_me}}</textarea>
+                                                    <textarea class="form-control" id="about_me" rows="3" name="about_me" required  readonly="true">{{$profile->about_me}}</textarea>
                                                 </div>
                                                 <!--/.form-group-->
                                             </div>
                                             <!--/.form-group-->
                                         </section>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-large btn-default" id="submit">Save Changes</button>
-                                        </div>
+                                        <!-- <div class="form-group">
+                                            <button type="button" class="btn btn-large btn-default" id="submit_profile_form">Save Changes</button>
+                                        </div> -->
                                         <!-- /.form-group -->
                                     </div>
                                     <!--/.col-md-6-->
@@ -158,25 +160,16 @@
                         </div>
                         <!--Password-->
                         <div class="col-md-3 col-sm-9">
-                            <h3><i class="fa fa-asterisk"></i>Password Change</h3>
+                            <h3><i class="fa fa-asterisk"></i>Manage Account</h3>
                             <form class="framed" id="form-password" role="form" method="post" action="?" >
-                                <div class="form-group">
-                                    <label for="current-password">Current Password</label>
-                                    <input type="password" class="form-control" id="current-password" name="current-password">
-                                </div>
                                 <!--/.form-group-->
                                 <div class="form-group">
-                                    <label for="new-password">New Password</label>
-                                    <input type="password" class="form-control" id="new-password" name="new-password">
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#update-profile"><i class="fa fa-pencil-square-o"></i> Update Personal Info</button>
                                 </div>
+                                <!-- /.form-group -->
                                 <!--/.form-group-->
                                 <div class="form-group">
-                                    <label for="confirm-new-password">Confirm New Password</label>
-                                    <input type="password" class="form-control" id="confirm-new-password" name="confirm-new-password">
-                                </div>
-                                <!--/.form-group-->
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Change Password</button>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#register"><i class="fa fa-pencil-square-o"></i> Change Password</button>
                                 </div>
                                 <!-- /.form-group -->
                             </form>
@@ -191,5 +184,8 @@
     </div>
     <!-- end Inner Wrapper -->
 </div>
+
+
+@include('profile.modals.update-profile')
 
 @stop
