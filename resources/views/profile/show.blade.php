@@ -52,7 +52,7 @@
                     </header>
                     <div class="row">
                         <div class="col-md-9">
-                            <form id="form-profile" role="form" method="post" action="?" enctype="multipart/form-data">
+                              {!! Form::open(['url' => 'profile/'.$profile->id.'/update', 'id' => 'form-profile']) !!}
                                 <div class="row">
                                     <!--Profile Picture-->
                                     <div class="col-md-3 col-sm-3">
@@ -75,7 +75,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="name">Name</label>
-                                                        <input type="text" class="form-control" id="name" name="name" value="Belle Yap">
+                                                        <input type="text" class="form-control" id="name" name="name" value="{{Auth::user()->name}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -83,7 +83,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email" value="belle@example.com">
+                                                        <input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}" readonly="true">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -91,7 +91,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="mobile">Mobile</label>
-                                                        <input type="text" class="form-control" id="mobile" name="mobile" pattern="\d*" value="903-675-5323">
+                                                        <input type="text" class="form-control" id="mobile" name="mobile" pattern="\d*" value="{{$profile->mobile}}">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -99,7 +99,7 @@
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-group">
                                                         <label for="phone">Phone</label>
-                                                        <input type="text" class="form-control" id="phone" name="phone" pattern="\d*" value="(0)123 456 7890">
+                                                        <input type="text" class="form-control" id="phone" name="phone" pattern="\d*" value="{{$profile->phone}}">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -109,20 +109,20 @@
                                         <section>
                                             <h3><i class="fa fa-map-marker"></i>Address</h3>
                                             <div class="form-group">
-                                                <label for="state">State</label>
-                                                <input type="text" class="form-control" id="state" name="state" value="Ohio">
+                                                <label for="state">State / Municipality</label>
+                                                <input type="text" class="form-control" id="state" name="state" value="{{$profile->state}}">
                                             </div>
                                             <!--/.form-group-->
                                             <div class="form-group">
                                                 <label for="city">City</label>
-                                                <input type="text" class="form-control" id="city" name="city" value="Georgetown">
+                                                <input type="text" class="form-control" id="city" name="city" value="{{$profile->city}}">
                                             </div>
                                             <!--/.form-group-->
                                             <div class="row">
                                                 <div class="col-md-8 col-sm-8">
                                                     <div class="form-group">
                                                         <label for="street">Street</label>
-                                                        <input type="text" class="form-control" id="street" name="street" value="2050 Sampson Street">
+                                                        <input type="text" class="form-control" id="street" name="street" value="{{$profile->street}}">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
@@ -130,24 +130,18 @@
                                                 <div class="col-md-4 col-sm-4">
                                                     <div class="form-group">
                                                         <label for="zip">ZIP</label>
-                                                        <input type="text" class="form-control" id="zip" name="zip" pattern="\d*" value="80444">
+                                                        <input type="text" class="form-control" id="zip" name="zip" pattern="\d*" value="{{$profile->zip}}">
                                                     </div>
                                                     <!--/.form-group-->
                                                 </div>
                                             </div>
-                                            <!--/.col-md-3-->
-                                            <div class="form-group">
-                                                <label for="additional-address">Additional Address Line</label>
-                                                <input type="text" class="form-control" id="additional-address" name="additional-address">
-                                            </div>
-                                            <!--/.form-group-->
                                         </section>
                                         <section>
                                             <h3><i class="fa fa-info-circle"></i>About Me</h3>
                                             <div class="form-group">
                                                 <label for="about-me">Some Words About Me</label>
                                                 <div class="form-group">
-                                                    <textarea class="form-control" id="about-me" rows="3" name="about-me" required></textarea>
+                                                    <textarea class="form-control" id="about_me" rows="3" name="about_me" required>{{$profile->about_me}}</textarea>
                                                 </div>
                                                 <!--/.form-group-->
                                             </div>
@@ -160,7 +154,7 @@
                                     </div>
                                     <!--/.col-md-6-->
                                 </div>
-                            </form>
+                                {!! Form::close() !!}
                         </div>
                         <!--Password-->
                         <div class="col-md-3 col-sm-9">

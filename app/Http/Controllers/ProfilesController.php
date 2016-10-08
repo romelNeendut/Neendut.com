@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use App\Models\Profile;
+use App\Http\Controllers\Controller;
 
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 
 class ProfilesController extends Controller
@@ -25,10 +22,26 @@ class ProfilesController extends Controller
     {
         $profile = Profile::findOrFail($profile_id);
 
-
         return view('profile.show', [
             'profile' => $profile,
         ]);
+    }
+
+    /**
+     * Update an existing Profile.
+     *
+     * @param Requests\SaveProfile $request
+     * @param null              $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(Requests\StoreProfile $request, $profile_id)
+    {
+
+        $profile = Profile::findOrFail($profile_id)
+        ->fill($request->all())
+        ->save();
+
+        return redirect('/profile/' . $profile_id );
     }
 
 }
