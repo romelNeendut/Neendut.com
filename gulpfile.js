@@ -42,6 +42,7 @@ require('laravel-elixir-vue');
          'mobirise/theme/js/script.js',
          'mobirise/mobirise-gallery/script.js',
          'mobirise/formoid/formoid.min.js',
+         'vue/vue-resource.min.js',
          'vue/vue.min.js',
      ], 'public/js/neendut.js');
 
@@ -71,6 +72,10 @@ require('laravel-elixir-vue');
           'spotter/js/jquery.hotkeys.js',
           'spotter/js/custom.js',
           'swal/sweetalert.min.js',
+          'spotter/js/dropzone.js',
+          'vue/vue.min.js',
+          'vue/vue-resource.min.js',
+          'vue/neendut/common.js',
       ],  'public/js/spotter.js');
 
  });
